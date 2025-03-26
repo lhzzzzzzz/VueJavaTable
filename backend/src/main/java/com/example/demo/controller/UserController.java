@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "http://你的服务器IP", "http://你的域名"})
 public class UserController {
 
     @Autowired

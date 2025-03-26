@@ -4,6 +4,8 @@ import axios from 'axios'
 import { ElMessage } from 'element-plus'
 import { Search } from '@element-plus/icons-vue'
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8081'
+
 const users = ref([])
 const loading = ref(false)
 const searchQuery = ref('')
@@ -11,7 +13,7 @@ const searchQuery = ref('')
 const fetchUsers = async () => {
   loading.value = true
   try {
-    const response = await axios.get('http://localhost:8080/api/users')
+    const response = await axios.get(`${API_BASE_URL}/api/users`)
     users.value = response.data
   } catch (error) {
     console.error('获取用户数据失败:', error)
