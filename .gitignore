@@ -1,0 +1,30 @@
+# 前端忽略文件
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.vite/
+frontend/.idea/
+frontend/.vscode/
+
+# 后端忽略文件
+backend/target/
+backend/.idea/
+backend/.vscode/
+backend/*.iml
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.springBeans
+backend/.sts4-cache
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+
+# 系统文件
+.DS_Store
+Thumbs.db 
