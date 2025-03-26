@@ -75,12 +75,23 @@ onMounted(() => {
 <style scoped>
 .container {
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #409EFF;
 }
 
 .box-card {
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .card-header {
@@ -97,10 +108,6 @@ onMounted(() => {
 
 .search-box {
   margin-bottom: 20px;
-}
-
-:deep(.el-table) {
-  margin-top: 20px;
 }
 
 :deep(.el-table th) {
