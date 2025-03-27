@@ -17,6 +17,8 @@ VueJavaTable/
 - Element Plus
 - Axios
 - Vite
+- Docker
+- Nginx
 
 ### 功能特点
 - 用户数据表格展示
@@ -25,7 +27,7 @@ VueJavaTable/
 - 响应式设计
 - 美观的UI界面
 
-### 运行方式
+### 本地开发运行方式
 1. 进入前端目录：
 ```bash
 cd frontend
@@ -41,7 +43,20 @@ npm install
 npm run dev
 ```
 
-4. 访问地址：`http://localhost:5173`
+4. 访问地址：`http://localhost:7000`
+
+### Docker部署方式
+1. 构建前端项目：
+```bash
+npm run build
+```
+
+2. 使用Docker Compose启动：
+```bash
+docker-compose up -d
+```
+
+3. 访问地址：`http://localhost:7000`
 
 ## 后端部分 (backend)
 
@@ -82,16 +97,18 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-4. API地址：`http://localhost:8080/api/users`
+4. API地址：`http://localhost:8081/api/users`
 
 ## 开发环境要求
 - Node.js >= 16
 - Java >= 8
 - Maven >= 3.6
 - MySQL >= 8.0
+- Docker (可选，用于部署)
 
 ## 注意事项
 1. 确保MySQL服务已启动
 2. 检查数据库连接配置是否正确
-3. 前端开发服务器默认端口为5173
-4. 后端API服务器默认端口为8080 
+3. 前端开发服务器默认端口为7000
+4. 后端API服务器默认端口为8081
+5. 使用Docker部署时，确保Docker服务已启动 
