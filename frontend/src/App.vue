@@ -13,7 +13,7 @@ const searchQuery = ref('')
 const fetchUsers = async () => {
   loading.value = true
   try {
-    const response = await axios.get(`${API_BASE_URL}/api/users`)
+    const response = await axios.get(`${API_BASE_URL}/table/users`)
     users.value = response.data
   } catch (error) {
     console.error('获取用户数据失败:', error)
