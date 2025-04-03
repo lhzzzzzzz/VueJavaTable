@@ -4,7 +4,7 @@ import axios from 'axios'
 import { ElMessage } from 'element-plus'
 import { Search } from '@element-plus/icons-vue'
 
-const API_BASE_URL = '/table'
+const API_BASE_URL = 'http://www.lhzzzzz.cn/table/api/users'
 
 const users = ref([])
 const loading = ref(false)
